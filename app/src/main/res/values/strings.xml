@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="select_filter">Select Filter</string>
+    <string name="ok_text">Ok</string>
+    <string-array name="news_filter">
+        <item>Last 24 Hours</item>
+        <item>Last 7 Days</item>
+        <item>Last 30 Days</item>
+    </string-array>
+</resources>

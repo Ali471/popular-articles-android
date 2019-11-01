@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/menu_refresh"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_sync"
+            android:title="Refresh"/>
+    <item
+            android:id="@+id/menu_filter"
+            android:icon="@drawable/ic_filter"
+            app:showAsAction="ifRoom"
+            android:title="Filter"/>
+
+</menu>
