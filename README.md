@@ -1,15 +1,17 @@
 # NewsApp New York Times Most Popular Article
-A basic android app to get most popular articles from New York Times Articles Api
+A basic android app to get most popular articles from New York Times Articles Api.
 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+- Import the project into Android Studio
+- Get api key from [NYT Developer Account] (https://developer.nytimes.com/apis) 
+- Replace api key value in build.gradle app level
+- Build and run the app on your target device
 
 
 ## Built With
 
 * [Kotlin](https://kotlinlang.org/) - Programming Language
-* [Livedata](https://developer.android.com/topic/libraries/architecture/livedata) -  Observable data holder
+* [Livedata](https://developer.android.com/topic/libraries/architecture/livedata) -  Android Architecture Components
 * [Glide](https://github.com/bumptech/glide) - Image Processing
 * [Retrofit](https://square.github.io/retrofit/) - Networking Liabrary
 * [CircleImageView](https://github.com/hdodenhof/CircleImageView) - Circular Image View
