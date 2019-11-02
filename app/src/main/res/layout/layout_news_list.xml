@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <TextView
-                android:text="Support of the Democratc candidate Support of the Democratc candidate dsfsdfsfddsf"
+                android:text=""
                 android:textColor="@color/colorTextPrimary"
                 android:textSize="16sp"
                 android:id="@+id/post_title"
@@ -39,7 +39,7 @@
         <TextView
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/post_title"
-                android:text="By David LeonHardt and STAURT Aliiii"
+                android:text=""
                 android:textColor="@color/colorTextSecondary"
                 android:textSize="16sp"
                 android:id="@+id/post_author"
@@ -49,10 +49,10 @@
                 android:layout_height="wrap_content"/>
         <TextView
                 android:layout_below="@+id/post_author"
-                android:text="THOMPSON"
+                android:text=""
                 android:maxLength="30"
                 android:textColor="@color/colorTextSecondary"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:id="@+id/post_type"
                 android:ellipsize="end"
                 android:lines="1"
@@ -64,10 +64,10 @@
                 android:drawableStart="@drawable/ic_date_range_black"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/post_author"
-                android:text="2016-06-23"
+                android:text=""
                 android:maxLength="30"
                 android:textColor="@color/colorTextSecondary"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:id="@+id/post_date"
                 android:ellipsize="end"
                 android:lines="1"
