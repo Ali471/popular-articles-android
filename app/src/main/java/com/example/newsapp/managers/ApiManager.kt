@@ -13,7 +13,6 @@ import java.util.concurrent.TimeUnit
 object ApiManager {
     private var retrofit: Retrofit? = null
 
-
     fun getClient(): Retrofit {
         val interceptor = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger { message ->
             Log.e(
@@ -26,13 +25,6 @@ object ApiManager {
         builder.addInterceptor(interceptor)
             .connectTimeout(Constant.CONNECTION_TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(Constant.READ_TIMEOUT, TimeUnit.SECONDS)
-            .addInterceptor { chain ->
-                //add custom request headers here
-                val newRequest = chain.request().newBuilder()
-                    .addHeader("Content-Type", "application/json")
-                    .build()
-                chain.proceed(newRequest)
-            }
         val client = builder.addInterceptor(interceptor).build()
         retrofit = Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)

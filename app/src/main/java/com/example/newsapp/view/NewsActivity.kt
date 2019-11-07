@@ -1,6 +1,5 @@
 package com.example.newsapp.view
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -26,6 +25,7 @@ class NewsActivity : AppCompatActivity() {
     private var newsViewModel:NewsViewModel?    =   null
     private var newsAdapter:NewsAdapter?        =   null
     private var selectedTime    =   Constant.NewFilter.DAY.value
+    private var newsList: ArrayList<NewsMediaModel.Root> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,12 +43,21 @@ class NewsActivity : AppCompatActivity() {
 
         //  Observer to get latest news based on filter
         newsViewModel?.getNews()?.observe(this, Observer {
-            initRecycler(it)
+            if (newsAdapter == null) {
+                newsList.addAll(it)
+                initRecycler(newsList)
+            } else {
+                newsList.clear()
+                newsList.addAll(it)
+                newsAdapter?.notifyDataSetChanged()
+            }
         })
+
         //  Observer for getting errors while loading News
         newsViewModel?.getError()?.observe(this, Observer {
             Snackbar.make(root,it.toString(),Snackbar.LENGTH_LONG).show()
         })
+
         //  Observer to check if record is updating
         newsViewModel?.isLoading()?.observe(this, Observer {
             if (it){

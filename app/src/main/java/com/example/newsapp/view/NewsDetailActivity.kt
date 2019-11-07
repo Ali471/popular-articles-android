@@ -1,20 +1,17 @@
 package com.example.newsapp.view
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.example.newsapp.R
 import com.example.newsapp.model.NewsMediaModel
 import kotlinx.android.synthetic.main.activity_news_detail.*
-import kotlinx.android.synthetic.main.activity_news_detail.post_author
-import kotlinx.android.synthetic.main.activity_news_detail.post_date
-import kotlinx.android.synthetic.main.activity_news_detail.post_title
-import android.content.Intent
-import android.graphics.drawable.ColorDrawable
-import android.net.Uri
-import android.view.Menu
-import android.view.MenuItem
-import androidx.core.content.ContextCompat
 
 
 class NewsDetailActivity : AppCompatActivity() {
@@ -30,7 +27,7 @@ class NewsDetailActivity : AppCompatActivity() {
         clickListeners()
     }
 
-    private fun initView(){
+    private fun initView() {
         post_title.text     =   newsItem.postTitle
         post_date.text      =   newsItem.postDate
         post_author.text    =   newsItem.postAuthor
