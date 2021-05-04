@@ -20,7 +20,7 @@ A basic android app to get most popular articles from New York Times Articles Ap
 
 ## Authors
 
-* **Muhammad Ali** - *Initial work* - [Ali471](https://github.com/Ali471)
+* **Muhammad Ali** - *Initial work* - [Ali471](https://github.com/ali0094)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
